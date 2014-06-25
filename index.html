@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Gerador feedback imediato para apresentadores e instrutores.">
+    <meta name="author" content="Thiago Laubstein">
+    <!-- <link rel="shortcut icon" href="favicon.ico"> -->
+    <title>Speedômetro</title>
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/jumbotron-narrow.min.css" rel="stylesheet">
+    <link href="css/speedometro.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+
+      <div class="header">
+        <ul class="nav nav-stacked pull-right">
+          <li><label>Usuários conectados:</label> <span id="users"></span></li>
+          <li><label>"+" utilizados:</label> <span id="lifes"></span></li>
+        </ul>
+        <h3 class="text-muted">Speedômetro</h3>
+      </div> <!-- /header -->
+
+      <div class="jumbotron">
+        <h1>Controle a velocidade do instrutor</h1>
+        <p class="lead">
+          <div id="crumbs">
+            <ul></ul>
+          </div>
+        </p>
+        <p>
+          <a class="btn btn-lg btn-danger minus" href="#" role="button">-</a>
+          <a class="btn btn-lg btn-success plus" href="#" role="button">+</a>
+        </p>
+      </div> <!-- /jumbotron -->
+
+      <article>
+        <h3>Você e seus colegas estão no poder!</h3>
+        <p>Você tem direito de aumentar ou diminuir a velocidade com que o instrutor passa o conteúdo.</p>
+        <p>Está muito rápido? Clique em <a class="btn-sml btn-sm btn-danger minus" href="#" role="button">-</a>.</p>
+        <p>Está muito devagar? Clique em <a class="btn-sml btn-sm btn-success plus" href="#" role="button">+</a>.</p>
+        <h3>Como funciona?</h3>
+        <p>Ao acessar o sistema você ganha uma fatia da barra de progresso, podendo utilizar até três "+" para incrementá-la ou até três "-" para decrementá-la.</p>
+        <p>A conta é a seguinte: (<i>quantidade de "+"'s</i> <b>/</b> (<i>número de usuários conectados</i> <b>*</b> <i>3</i>)) <b>*</b> <i>100</i></p>
+        <h3>Exemplo</h3>
+        <p>Dez usuários acessam o sistema e não clicam em nenhum botão, a barra de progresso ficará em: 33%.</p>
+        <p><i>* Sempre que um usuário acessa o sistema a barra recebe um "+".</i></p>
+      </article>
+
+      <div class="footer">
+        <p><a href="http://github.com/laubstein" title="Perfil no GitHub">@laubstein</a> (<a href="http://github.com/laubstein/speedometro" title="GitHub">Speedometro</a>)</p>
+      </div> <!-- /footer -->
+    </div> <!-- /container -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <script src="js/vendor/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/vendor/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <!-- Placed at the end of the document so the pages load faster -->
+  </body>
+</html>

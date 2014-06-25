@@ -1,0 +1,9 @@
+{
+  "name": "Speedometro",
+  "version": "0.0.1",
+  "description": "feedback para apresentadores/monitores",
+  "dependencies": {
+    "express": "~4.4.4",
+    "socket.io": "~1.0.6"
+  }
+}
